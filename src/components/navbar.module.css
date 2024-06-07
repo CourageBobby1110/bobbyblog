@@ -28,6 +28,9 @@ padding: 1rem;
     justify-content: space-between;
     font-weight: 600;
 }
+.header h2{
+    color: #F2A359;
+}
 
 .active{
     padding: 0.75rem;
@@ -35,4 +38,36 @@ padding: 1rem;
     background-color: #F2A359;
     color: black;
     transition: ease-in-out 0.2s;
+}
+.empty{
+    color: black;
+}
+.prof{
+    position: relative;
+}
+.main{
+    position: absolute;
+    top: 3.7rem;
+    right: 0.3rem;
+    border: 1px solid  #F2A359;
+    padding: 15px;
+    background-color: white;
+  
+    border-radius: 16px;
+    transition: 0.2s ease-in;
+
+
+}
+.main::before{
+    content: "";
+    position: absolute;
+    top: -0.7rem;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    background-color: white;
+    right: 1.1rem;
+    border-left: 1px solid #F2A359;
+    border-top: 1px solid #F2A359;
+
 }

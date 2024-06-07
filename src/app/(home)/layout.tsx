@@ -1,9 +1,9 @@
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
 })
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
          
-      <body className={roboto.className}>
+      <body className={montserrat.className}>
         <Navbar/>
         {children}
         </body>

@@ -2,7 +2,7 @@
 
 
 import { Nav } from '@/constants/nav'
-import React from 'react'
+import React, { useState } from 'react'
 import  {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
@@ -10,16 +10,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from '@/components/navbar.module.css'
 import { usePathname } from 'next/navigation';
+import Dropdown from './dropdown';
+
+
 
 
 
 const Navbar = () => {
+  const[open, setIsOpen] = useState(false);
     const pathname = usePathname();
     const { isAuthenticated, user, getPermissions} = useKindeBrowserClient();
   const {permissions} = getPermissions();
   return (
-    <div className={`${styles.header} px-5 py-2`}>
-    <h3> Courage's Blog</h3>
+    <div className={`${styles.header} px-10 py-2`}>
+    <h2> Courage's Blog</h2>
 
 
      <ul className={`${styles.ul}`}>
@@ -35,12 +39,22 @@ const Navbar = () => {
     }
 
    
+
+   
     <RegisterLink>Sign up</RegisterLink>
 
-    {!isAuthenticated ?  <LoginLink>Login</LoginLink>:  <LogoutLink>Log out</LogoutLink>}
+    {!isAuthenticated ?  <LoginLink>Login</LoginLink>:  null}
    <div className='flex gap-1 '>
-     {user?.picture && (<Image src={user?.picture} alt='profile picture' width={25} height={25} className='rounded-full'></Image>)}
-   {isAuthenticated ? <Link href="/account">Account</Link> : ""}
+     {user?.picture && (<div  className={`${styles.prof}`}>        <Image src={user?.picture} alt='profile picture' width={25} height={25} className='rounded-full'>
+     
+     </Image>  </div>)}
+     
+      {
+      open &&  <Dropdown/>
+      }  
+     
+   
+   {isAuthenticated ? <div  className='cursor-pointer'  onClick={() => setIsOpen((prev) => !prev)} >Account</div> : null}
    </div>
 
    
