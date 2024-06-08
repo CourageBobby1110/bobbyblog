@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import { Send, SendHorizontal } from "lucide-react";
 import Trending from "@/components/trending";
 import { getPosts } from "@/lib/getPosts";
+import DailyNews from '../../components/dailynews';
 
 interface posts{
   title: string;
@@ -60,6 +61,7 @@ export default async function  Home () {
 
       
          <Trending posts={data}/>
+         <DailyNews/>
       
      
     </main>

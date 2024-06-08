@@ -37,6 +37,7 @@ const Trending = ({posts}: posttype) => {
     autoplay={{
       delay: 2000,
       disableOnInteraction: true,
+      
     }}
     
     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -52,7 +53,7 @@ const Trending = ({posts}: posttype) => {
     >
         {
             posts.map(posts=> (
-                <SwiperSlide className={styles.swiperSlide}>
+                <SwiperSlide className={styles.swiperSlide} key={posts.title}>
                 <div className={styles.first}>
                 <Image src={posts.image[0]} alt='airpods' width={400} height={400} className={styles.img}/>
                  <div>

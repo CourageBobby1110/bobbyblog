@@ -2,6 +2,19 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+
+
+  .swiper-button-prev{
+    color:  #F37E11 !important;
+  }
+
+.swiper-button-next{
+    color:    #F37E11  !important;
+  }
+.swiper-scrollbar-drag{
+  background-color: #F37E11 !important;
+}
  
 
 

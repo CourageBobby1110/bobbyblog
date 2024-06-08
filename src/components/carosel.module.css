@@ -5,7 +5,7 @@
     padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
-   background-color: whitesmoke;
+   background-color: whitesmoke ;
    border-top:  #F37E11   2px solid;
 }
 
@@ -43,7 +43,7 @@
 }
 .first div p{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: black;
     width: 600px;
      
@@ -77,9 +77,11 @@
 }
 
 .img{
-    border-radius: 16px;
+    border-radius: 10px;
     height: 400px;
     width: 500px;
+   
+    
 }
 
 .body{
@@ -87,3 +89,6 @@
     flex-direction: column;
     gap: 0.2rem;
 }
+
+
+
