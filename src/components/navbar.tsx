@@ -54,7 +54,7 @@ const Navbar = () => {
       }  
      
    
-   {isAuthenticated ? <div  className='cursor-pointer'  onClick={() => setIsOpen((prev) => !prev)} >Account</div> : null}
+   {isAuthenticated ? <div  className='cursor-pointer'  onMouseOver={() => setIsOpen((prev) => !prev)} >Account</div> : null}
    </div>
 
    

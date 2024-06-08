@@ -17,6 +17,15 @@ interface posts{
 
 export default async function  Home () {
   const data = await getPosts() as posts[]
+
+  const recentdata = data.filter(f => {
+    return f.categories.includes('recent')
+  } )
+
+  const trendingdata = data.filter(t => {
+    return t.categories.includes('trending')
+  })
+  // console.log(filtereddata)
  
 // const bionic =   data.map(p =>{
 //     return {
@@ -60,8 +69,8 @@ export default async function  Home () {
       </div>
 
       
-         <Trending posts={data}/>
-         <DailyNews/>
+         <Trending posts={trendingdata}/>
+         <DailyNews posts={data} />
       
      
     </main>

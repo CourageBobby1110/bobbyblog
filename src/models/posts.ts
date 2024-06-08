@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 interface posts{
     title: string,
     body: string,
-    date: Date,
+  
     author:string,
     image:string[],
     tags: string[],
@@ -17,11 +17,12 @@ interface posts{
 const postSchema = new mongoose.Schema<posts>({
     title: {type: String, required: true},
     body: {type: String, required: true},
-    date: {type: Date,},
+   
     author: {type: String, required: true},
     image: {type: [],},
     categories: {type: [], required: true},
     tags: {type: []},
+    
 
    
       createdAt: {

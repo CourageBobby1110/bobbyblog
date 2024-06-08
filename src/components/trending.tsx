@@ -32,10 +32,10 @@ const Trending = ({posts}: posttype) => {
     <div className={`${styles.misc}`}>
         <h1>Trending</h1>
         <Swiper
-        navigation = {true}
+        // navigation = {true}
     className={styles.swiper}
     autoplay={{
-      delay: 2000,
+      delay: 4000,
       disableOnInteraction: true,
       
     }}
@@ -43,8 +43,8 @@ const Trending = ({posts}: posttype) => {
     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
-    //   pagination={{ clickable: true}}
-      scrollbar={{ draggable: true,  }}
+      pagination={{ clickable: true}}
+      // scrollbar={{ draggable: true,  }}
       
       color=' #F37E11 '
      
@@ -55,8 +55,13 @@ const Trending = ({posts}: posttype) => {
             posts.map(posts=> (
                 <SwiperSlide className={styles.swiperSlide} key={posts.title}>
                 <div className={styles.first}>
-                <Image src={posts.image[0]} alt='airpods' width={400} height={400} className={styles.img}/>
+                  <div className={styles.imgdiv}>
+                  <Image src={posts.image[0]} alt='airpods' height={300} width={300} className={styles.img}/>
+
+                  </div>
+              
                  <div>
+                  <div className={styles.ft}>Featured post</div>
                    <h2>{posts.title}</h2>
                  <div className={styles.body}>
                  <p>{posts.body}</p>
