@@ -46,27 +46,7 @@ export default async function  Home () {
 
   return (
     <main >
-      <div className={`${styles.herocontainer} flex justify-between items-center px-5`}>
-      <div className={`${styles.hero}`}>
-
-      <h1>Made For Great Minds...</h1>
-      <p>Explore my world and see contents that will inspire, educate and improve your life from health to tech, etc.</p>
-      <div>
-        <button className={`${styles.btn}`}>Explore <SendHorizontal /></button>
-      </div>
-
-      </div>
-
-      <div>
-        <Image src='/Broken light bulb-pana.svg' alt="the globe"  width={500} height={500}></Image>
-
-      </div>
-
       
-      
-
-      
-      </div>
 
       
          <Trending posts={trendingdata}/>
