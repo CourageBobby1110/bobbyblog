@@ -29,7 +29,7 @@ const DailyNews = ({posts}: posttype) => {
             posts.map(posts => (
               <div className={styles.featuredpost} key={posts.title}>
               <div className={styles.imagewrapper}>
-              <img alt='featured post' className={styles.image} src={posts.image} />
+              <Image  className={styles.image}  src={posts.image[0]} alt='toparticles'  fill/>
               </div>
                 <div className={styles.content}>
                   <h3>{posts.title}</h3>
