@@ -48,8 +48,8 @@ const Navbar = () => {
   return (
 
        <div className={styles.header}>
-    <h2> Courage's Blog</h2>
-    <div>
+    <h2> Inferno</h2>
+    <div className={styles.top}>
       <Menu className={styles.menu} onClick={() => setIsActive((prev) => !prev)}/>
     </div>
     <ul className={`${styles.ul}  ${ isActive ? styles.jaguar :''}`}>

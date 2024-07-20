@@ -5,6 +5,7 @@ import Trending from "@/components/trending";
 import { getPosts } from "@/lib/getPosts";
 import DailyNews from '../../components/dailynews';
 import Toparticles from "@/components/toparticles";
+import Footer from "@/components/footer";
 
 interface posts{
   title: string;
@@ -53,6 +54,7 @@ export default async function  Home () {
          <Trending posts={trendingdata}/>
          <DailyNews posts={data} />
          <Toparticles posts={data}/>
+         <Footer/>
       
      
     </main>

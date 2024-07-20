@@ -1,0 +1,69 @@
+.footermain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 2rem 1rem 1rem 1rem  ;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.container{
+    background-color: #e9ad75;
+    height: 400px;
+    width: 100%;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.all{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content h2{
+    font-size: 20px;
+  
+
+}
+
+.inputdiv{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inputdiv input{
+    width: 25rem;
+    height: 3rem;
+    border-radius: 0.25rem;
+    padding: 0.15rem;
+    border: none;
+    
+}
+
+.inputdiv input:focus{
+    outline: 2px solid #f8993f;
+}
+.inputdiv button{
+    background-color: #f8993f;
+    height: 3rem;
+    width: 4rem;
+    border-radius: 0.25rem;
+    color: white;
+
+}
