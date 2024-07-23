@@ -1,12 +1,12 @@
 .ul{
     display: flex;
     list-style: none;
-    gap: 7rem;
+    
     /* From https://css.glass */
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.81);
 
-border-radius: 16px;
+border-radius: 0.15rem;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
@@ -14,6 +14,9 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 padding: 1rem;
 z-index: 10;
 text-transform: uppercase;
+width: 100%;
+justify-content: space-around;
+
 
 
 
@@ -112,6 +115,12 @@ text-transform: uppercase;
    
     .menu{
         display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        font-size: 40px;
+
+
       
     }
    
@@ -121,6 +130,7 @@ text-transform: uppercase;
 .ul li a {
     text-decoration: none;
     font-size: 14px;
+    
  
 
 
@@ -132,18 +142,21 @@ text-transform: uppercase;
     justify-content: space-between;
     font-weight: 600;
     padding: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
-.header h2{
+.header h1{
     color: #F2A359;
+    text-transform: uppercase;
   
 }
 
 .active{
     padding: 0.75rem;
-    border-radius: 0.75rem;
+    border-radius: 0.15rem;
     background-color: #F2A359;
     color: black;
     transition: ease-in-out 0.2s;
@@ -173,7 +186,7 @@ text-transform: uppercase;
         position: absolute;
     
         top: 3.7rem;
-        right: 0.3rem;
+        right: 4.5rem;
         border: 1px solid  #F2A359;
         padding: 15px;
          background-color: white;
@@ -197,5 +210,6 @@ text-transform: uppercase;
         align-items: center;
         gap: 0.20rem;
     }
+   
     
 }

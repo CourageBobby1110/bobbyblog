@@ -15,8 +15,8 @@ export const Nav = [
 
       {
         id: 4,
-        name: 'blog',
-        path: '/blog'
+        name: 'Education',
+        path: '/education'
 
       },
         

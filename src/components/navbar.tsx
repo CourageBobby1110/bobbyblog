@@ -48,7 +48,8 @@ const Navbar = () => {
   return (
 
        <div className={styles.header}>
-    <h2> Inferno</h2>
+       <div> <h1>  inferno</h1></div>
+  
     <div className={styles.top}>
       <Menu className={styles.menu} onClick={() => setIsActive((prev) => !prev)}/>
     </div>
@@ -80,7 +81,7 @@ const Navbar = () => {
      </Image>  </div>)}Account  <div className={rotate ?`${styles.rotate}` : ""}><ChevronDown  className={styles.drop}  /></div></p> {
       open &&  <div><Dropdown/></div> 
 
-      }    </div> : null}
+      }    </div> : <p>ACCOUNT</p>}
    </div>
       
     </ul>

@@ -1,0 +1,58 @@
+@media screen and (min-width: 75rem){
+    .parent{
+        padding: 0.75rem;
+    }
+    .sidenav{
+        background-color: #f1b57c;
+       
+        height: 4.5rem;
+       
+       padding: 1rem;
+       display: flex;
+     
+       align-items: center;
+       font-weight: bold;
+       border-radius: 0.75rem
+     
+     
+    
+
+
+    }
+    .links{
+        padding: 0.75rem;
+        display: flex;
+   
+        justify-content: space-between;
+        align-items: center;
+       
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 14px;
+
+      
+       
+    }
+
+    .links a{
+        padding: 1rem;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+
+    }
+    
+    .active{
+        background-color: #f07b0d;
+        color: white;
+        padding: 0.85rem;
+        border-radius: 0.75rem;
+        transition: ease-in-out 0.2s;
+    }
+    .active p{
+        color: white;
+    }
+
+    
+    
+}
