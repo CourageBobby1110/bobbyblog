@@ -1,14 +1,12 @@
-import React from 'react'
+
+
+import FormInput from './formfield'
+
 
 const Dashboard = () => {
   return (
     <div>
-      <form action="">
-
-
-
-        
-      </form>
+     <FormInput/>
 
 
 

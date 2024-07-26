@@ -2,6 +2,14 @@
     .parent{
         padding: 0.75rem;
     }
+
+    .hamburger{
+        display: none;
+    }
+
+    .close{
+        display: none;
+    }
     .sidenav{
         background-color: #f1b57c;
        
@@ -34,7 +42,7 @@
        
     }
 
-    .links a{
+    .links div{
         padding: 1rem;
         display: flex;
         gap: 0.75rem;
@@ -55,4 +63,92 @@
 
     
     
+}
+
+@media screen and (max-width: 75rem){
+
+    .parent{
+        position: relative;
+       
+      
+
+      
+        
+        }
+
+        .hamburger{
+            position: absolute;
+          opacity: 1;
+          top: 0;
+            
+        }
+        .close{
+            position: absolute;
+            right: 0;
+            top:0;
+            padding: 0.2rem;
+          
+        }
+ .sidenav.puma{
+            left: 0;
+            transition: 0.5s left ease-in-out;
+        }
+    .sidenav{
+        background-color: #f1b57c;
+        display: flex;
+        flex-direction: column;;
+        z-index: 100;
+       padding-top: 0.75rem;
+        padding-right: 3rem;
+       left: -100rem;
+        position: absolute;
+        transition: 0.5s ease-in all;
+        
+       
+       
+        height: 100vh;
+       
+        
+       
+       
+       
+       
+    }
+    .links{
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: column;
+   
+        justify-content: space-between;
+       
+       
+       height: 100%;
+        text-transform: uppercase;
+        font-size: 14px;
+        
+
+      
+       
+    }
+    .links div{
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: bold;
+        padding: 0.7rem;
+    }
+
+    .active{
+        background-color: #f07b0d;
+        color: white;
+      
+       
+      width: 10rem;
+      height: 3rem;
+      padding: 0.7rem;
+        border-radius: 0.75rem;
+        transition: ease-in-out 0.2s;
+    }
+  
+
 }

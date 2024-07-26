@@ -23,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Sidebar/>
-        {children}
+       <div className='bigdiv'>
+       <Sidebar/>
+       {children}
+       </div>
         </body>
     </html>
   );

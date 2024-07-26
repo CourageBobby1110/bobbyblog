@@ -1,9 +1,9 @@
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const montserrat = Poppins({
   weight: '400',
   subsets: ['latin'],
 })

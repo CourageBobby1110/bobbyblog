@@ -5,3 +5,13 @@
     text-decoration: none;
     color: black;
 }
+
+@media screen and (max-width:75rem){
+    .bigdiv{
+        display: flex;
+    gap: 10rem;
+ 
+   
+    
+    }
+}
