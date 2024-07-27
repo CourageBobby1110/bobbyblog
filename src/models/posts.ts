@@ -7,7 +7,7 @@ interface posts{
     author:string,
     image:string[],
     tags: string[],
-    categories: string[],
+    categories: string,
     createdAt : Date,
     updatedAt : Date,
 }
@@ -20,7 +20,7 @@ const postSchema = new mongoose.Schema<posts>({
    
     author: {type: String, required: true},
     image: {type: [],},
-    categories: {type: [], required: true},
+    categories: {type: String, required: true},
     tags: {type: []},
     
 
