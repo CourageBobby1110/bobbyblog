@@ -13,7 +13,7 @@ interface posts{
   date: string;
   author: string;
   image: string;
-  categories: string[];
+  categories: string;
 
 }
 
@@ -21,11 +21,11 @@ export default async function  Home () {
   const data = await getPosts() as posts[]
 
   const recentdata = data.filter(f => {
-    return f.categories.includes('recent')
+    return f.categories == 'Trending'
   } )
 
   const trendingdata = data.filter(t => {
-    return t.categories.includes('trending')
+    return t
   })
   // console.log(filtereddata)
  
@@ -53,7 +53,7 @@ export default async function  Home () {
       
          <Trending posts={trendingdata}/>
          <DailyNews posts={data} />
-         <Toparticles posts={data}/>
+         <Toparticles posts={recentdata}/>
          <Footer/>
       
      

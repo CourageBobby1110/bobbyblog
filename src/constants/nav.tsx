@@ -8,13 +8,13 @@ export const Nav = [
     },
     
         {
-        id: 2,
+        id: 5,
         name: 'contacts', 
         path: '/contacts'
       },
 
       {
-        id: 4,
+        id: 3,
         name: 'Education',
         path: '/education'
 
@@ -24,11 +24,20 @@ export const Nav = [
 
 
         {
-        id: 3,
+        id: 4,
         name: 'admin', 
         path: '/admin',
         requiresAuth: true,
         requiredPermissions: ["delete:question"]
+
+    },
+
+        {
+        id: 2,
+        name: 'search', 
+        path: '/search',
+        requiresAuth: true,
+   
 
     }
 

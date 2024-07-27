@@ -2,6 +2,9 @@
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "../adminstyles/form.module.css";
+import { Toaster, toast } from 'sonner'
+import { DNA, InfinitySpin, Triangle } from "react-loader-spinner";
+import { useRouter } from "next/navigation";
 
 
 
@@ -22,13 +25,20 @@ interface Inputs  {
 
 
 const FormInput = ( ) => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
-    watch,
+   
+  
     formState: { errors, isSubmitting },
+    reset
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 4000)); 
+    
+    // Simulate a delay for server response
+   
     try {
       
       await fetch('http://localhost:3000/api/posts', {
@@ -50,10 +60,15 @@ const FormInput = ( ) => {
         }),
         
       }
+    
       
     
     
     );
+    toast.success("Post has been added successfully")
+    reset()
+    
+  
 
      
       
@@ -70,6 +85,7 @@ const FormInput = ( ) => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      
       <h2>Add a Post 🔥</h2>
 
       <div>
@@ -126,8 +142,42 @@ const FormInput = ( ) => {
       </div>
 
       <div>
-        <input  disabled={isSubmitting}  type="submit" className={styles.btn} placeholder={`${isSubmitting ? "Loading...." : 'Submit'}`}  />
+
+
+      <button disabled={isSubmitting} type="submit" className={styles.btn}>
+          {isSubmitting ? (
+            
+           <div className={styles.loader}>
+             {/* <InfinitySpin
+            
+           
+            
+            width="100"
+            color="#FFFFFF"
+           
+            
+           
+            /> */}
+
+<Triangle
+  visible={true}
+  height="50"
+  width="80"
+  color="#FFFFFF"
+  ariaLabel="triangle-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  />
+           </div>
+              
+            
+          ) : (
+            'Submit'
+          )}
+        </button>
+    
       </div>
+      <Toaster richColors position="top-center" /> 
     </form>
   );
 };
