@@ -13,12 +13,7 @@ export const Nav = [
         path: '/contacts'
       },
 
-      {
-        id: 3,
-        name: 'Education',
-        path: '/education'
-
-      },
+     
         
         
 
@@ -37,7 +32,7 @@ export const Nav = [
         name: 'search', 
         path: '/search',
         requiresAuth: true,
-   
+  
 
     }
 

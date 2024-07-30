@@ -1,11 +1,12 @@
-import Image from "next/image";
-import styles from './page.module.css'
-import { Send, SendHorizontal } from "lucide-react";
+
+
 import Trending from "@/components/trending";
 import { getPosts } from "@/lib/getPosts";
 import DailyNews from '../../components/dailynews';
 import Toparticles from "@/components/toparticles";
 import Footer from "@/components/footer";
+import { addUser} from "./getUser";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 interface posts{
   title: string;
@@ -18,6 +19,7 @@ interface posts{
 }
 
 export default async function  Home () {
+  const {getUser } =  getKindeServerSession();
   const data = await getPosts() as posts[]
 
   const recentdata = data.filter(f => {
@@ -45,6 +47,11 @@ export default async function  Home () {
 // const   {title, body, author, image, date} = await getPosts() as posts
 
 
+const ctx = await getUser();
+await addUser({ firstName: ctx?.given_name, lastName: ctx?.family_name, email: ctx?.email, image: ctx?.picture, _id: ctx?.id});
+
+  
+
 
   return (
     <main >
@@ -60,3 +67,5 @@ export default async function  Home () {
     </main>
   );
 }
+
+

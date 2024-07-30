@@ -22,6 +22,11 @@ export const  Nav = [
     
 },
 {
+    name: "tutors",
+    path: "/tutorsadmin",
+    icon: 'personnel.svg'
+},
+{
     name: "Students",
     path: "/students",
     icon: 'people.svg'

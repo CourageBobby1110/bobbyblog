@@ -12,6 +12,8 @@ import styles from '@/components/navbar.module.css'
 import { usePathname } from 'next/navigation';
 import Dropdown from './dropdown';
 import { Menu, ChevronDown } from 'lucide-react';
+import { education } from '@/constants/education';
+
 
 
 
@@ -26,6 +28,7 @@ const Navbar = () => {
   const[open, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false)
   const [rotate, setRotate] = useState(false)
+  const [showEducation, setShowEducation] = useState(false)
   const closeMenu = () => {
     setIsActive(false)
   }
@@ -48,7 +51,7 @@ const Navbar = () => {
   return (
 
        <div className={styles.header}>
-       <div> <h1>  inferno</h1></div>
+       <div> <h1>  Ravens Academy</h1></div>
   
     <div className={styles.top}>
       <Menu className={styles.menu} onClick={() => setIsActive((prev) => !prev)}/>
@@ -63,7 +66,24 @@ const Navbar = () => {
           </li>)
        })
     }
+    <Link href='#' className= {styles.educationLink} onMouseEnter={()=>setShowEducation(true)} onMouseLeave={()=> setShowEducation(false)}>Education</Link>
+      {
+        showEducation && <div className={styles.education} onMouseEnter={() => setShowEducation(true)} onMouseLeave={() => setShowEducation(false)}>
+          <div className={styles.linkdiv}   >
+          {
+          education.map((z) => (
+            <Link   key={z.title}  href={z.path} className={styles.edulinks} onClick={()=>setShowEducation(false)}>
+              <Image src={z.icon || ""} alt='education logo' width={40} height={40} /> 
+            
+              <p>{z.title}</p>
+            </Link>
+          ))
+        }
 
+          </div>
+      
+      </div>
+      }
    
 
    
