@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { atlas } from '@/lib/getp'
 import Link from 'next/link'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-
+import styles from './tutoradmin.module.css'
 
 
 const Search =   ({placeholder}: {placeholder: string}) => {
@@ -49,10 +49,10 @@ const Search =   ({placeholder}: {placeholder: string}) => {
 
 
   return (
-    <div>
+    <div className={styles.search}>
 
-      <input type="text" placeholder={placeholder} onChange={(e) => {setState(e.target.value), handleSearch(e.target.value)}} defaultValue={searchParams.get('query')?.toString()} className='bg-slate-500'/>
-      <button onClick={()=> handleSearch(state)} >search</button>
+      <input type="text" placeholder="search Tutors" onChange={(e) => {setState(e.target.value), handleSearch(e.target.value)}} defaultValue={searchParams.get('query')?.toString()} className={styles.input}/>
+      <button className={styles.btn} onClick={()=> handleSearch(state)} >search</button>
     </div>
   
   )

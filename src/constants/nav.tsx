@@ -12,6 +12,14 @@ export const Nav = [
         name: 'contacts', 
         path: '/contacts'
       },
+        {
+        id: 6,
+        name: 'About Us', 
+        path: '/aboutus'
+      },
+       
+
+
 
      
         

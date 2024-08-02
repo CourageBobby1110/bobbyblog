@@ -1,16 +1,10 @@
 interface Inputs{
-    role: string;
-    whatsapp: string;
-    description: string;
-    tutor_image: string;
-    courses: string[];
-    department: string;
-    price: number;
+    
     id: string;
     isVerified: string;
 }
 
-export const Updatetutor = async ( {whatsapp, role, description, id, tutor_image, courses, department, price, isVerified}: Inputs ) =>{
+export const Updatetutor = async ( { isVerified, id}: Inputs ) =>{
     if (!id) {
         console.error('ID is undefined');
         return;
@@ -23,13 +17,7 @@ export const Updatetutor = async ( {whatsapp, role, description, id, tutor_image
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              role,
-              whatsapp,
-              description,
-              tutor_image,
-              courses,
-              department,
-              price,
+            
               isVerified,
             })
         })

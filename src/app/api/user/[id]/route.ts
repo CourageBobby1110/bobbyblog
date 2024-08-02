@@ -9,7 +9,7 @@ export async function PUT(request: NextRequest, { params }: any) {
 
   try {
     const { id } = params;
-    const { role, whatsapp,  description,  tutor_image,   courses,  department,  price } = await request.json();
+    const { role, whatsapp,  description,  tutor_image,   courses,  department,  price, isVerified } = await request.json();
 
   
 
@@ -21,6 +21,7 @@ export async function PUT(request: NextRequest, { params }: any) {
       courses: courses,
       department: department,
       price: price,
+      isVerified: isVerified
     });
     if (!Xpros) {
         return NextResponse.json({ message: "User not found" }, { status: 404 });

@@ -49,7 +49,7 @@ const TutorForm = ({id}: PageProps) => {
     
     // Simulate a delay for server response
    
-   await  Updatetutor({whatsapp: data.whatsapp, description: data.description, courses: data.courses, department: data.department, price: data.price, role: data.role,tutor_image:data.tutor_image,id: id } )
+   await  Updatetutor({whatsapp: data.whatsapp, description: data.description, courses: data.courses, department: data.department, price: data.price, role: data.role,tutor_image:data.tutor_image,id: id, isVerified:"false" } )
     toast.success("User updated successfully")
     router.push('/tutor')
    

@@ -67,6 +67,14 @@ const Navbar = () => {
        })
     }
     <Link href='#' className= {styles.educationLink} onMouseEnter={()=>setShowEducation(true)} onMouseLeave={()=> setShowEducation(false)}>Education</Link>
+
+     {
+      <div><Link href=''>Dashboard</Link></div>
+     }
+
+
+
+
       {
         showEducation && <div className={styles.education} onMouseEnter={() => setShowEducation(true)} onMouseLeave={() => setShowEducation(false)}>
           <div className={styles.linkdiv}   >

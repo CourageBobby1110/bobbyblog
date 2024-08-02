@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Search from "./search";
 import Tutorcard from "./tutorcard";
+import styles from './tutoradmin.module.css';
+import { atlas } from '@/lib/getp';
 
 export const getProducts = async () => {
   try {
@@ -18,10 +20,24 @@ const TutorAdmin = async ({ searchParams }: { searchParams?: { query?: string; p
   console.log(searchParams?.page);
   let page = parseInt(searchParams?.page, 10);
   page = !page || page < 1 ? 1 : page;
+  const query = searchParams?.query || '';
+  const data = await  atlas(query, page)
+ 
+  const totalPages = Math.ceil(data.x / 3);
+ 
+  
   const prevPage = page - 1 > 0 ? page - 1 : 1;
   const nextPrev = page + 1;
+  const pageNumbers = [];
+  const OffsetNumber = 3;
+  for(let i =page - OffsetNumber; i <= page + OffsetNumber; i++) {
+    if(i >= 1 && i <= totalPages){
+       pageNumbers.push(i);
+    }
+  }
+ 
 
-  const query = searchParams?.query || '';
+ 
   interface Product {
     _id: string;
     name: string;
@@ -32,17 +48,58 @@ const TutorAdmin = async ({ searchParams }: { searchParams?: { query?: string; p
   const { getUser } = getKindeServerSession();
   const p = await getUser();
   console.log(p?.given_name as string);
+ 
+ 
+ 
+  console.log(data.x)
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <Search placeholder="search products" />
+    <main >
+      <div  className={styles.main}>
+      <div>  <Search placeholder="search products" /></div>
         <Tutorcard query={query} z={page} />
+
+        <div className={styles.page}>
+           <div className={styles.pagex}>
+          
         {page === 1 ? (
-          <div className="opacity-60">Previous</div>
+          <div className={`"opacity-60" `} aria-disabled ="true">Previous</div>
         ) : (
-          <Link href={`?page=${prevPage}`}>Previous</Link>
+         <div className={styles.prev}> <Link href={`?page=${prevPage}`} >Previous</Link></div>
         )}
+
+        {/* page Number */}
+
+        {
+          pageNumbers.map((number) => (
+            <Link key={number} className={styles.pageNumber} href={ `?page=${number}` }>
+              {number}
+            </Link>
+          ))}
+
+
+
+
+
+        
+
+
+
+
+        {
+          page === totalPages? (
+            <div className={`"opacity-60" `} aria-disabled ="true">Next </div>
+          ) : (
+            <div className={styles.next}> <Link href={`?page=${nextPrev}`} >Next</Link></div>
+          )
+        }
+
+           </div>
+
+        </div>
+      
+
+       
       </div>
     </main>
   );

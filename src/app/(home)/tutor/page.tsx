@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import Tutordashboard from "./tutordashboard";
 import TutorReg from "./tutorreg";
+import TutorVerified from "./verified";
 
 const Tutor = async  () => {
     interface z{
@@ -13,6 +14,7 @@ const Tutor = async  () => {
         role: string;
         price: number;
         email: string;
+        isVerified : string;
         
     
       }
@@ -37,11 +39,14 @@ const getUsers = async() => {
   const users = await getUsers() as z[];
   const puma =  users.filter((user) => user._id === p?.id as string )
   const getpumarole = puma.map(p =>{
-     return p.role
+     return {
+      role: p.role,
+      isVerified: p.isVerified
+     }
   } )
 
   const stringdata = getpumarole.map(role => {
-    return role === 'tutor'? <div key={role.toString()}><Tutordashboard/></div> : <div key={role.toString()}><TutorReg x={p?.id}/></div>
+    return role.role=== 'tutor'  ? <div key={role.toString()}>{role.isVerified ==='true' ? <div><TutorVerified/></div>: <div><Tutordashboard/></div>}</div> : <div key={role.toString()}><TutorReg x={p?.id}/></div>
 } )
 
 
