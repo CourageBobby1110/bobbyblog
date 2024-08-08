@@ -9,7 +9,7 @@ export async function PUT(request: NextRequest, { params }: any) {
 
   try {
     const { id } = params;
-    const { role, whatsapp,  description,  tutor_image,   courses,  department,  price, isVerified } = await request.json();
+    const { role, whatsapp,  description,  tutor_image,   courses,  department,  price, isVerified, ispaid} = await request.json();
 
   
 
@@ -21,7 +21,8 @@ export async function PUT(request: NextRequest, { params }: any) {
       courses: courses,
       department: department,
       price: price,
-      isVerified: isVerified
+      isVerified: isVerified,
+      ispaid: ispaid,
     });
     if (!Xpros) {
         return NextResponse.json({ message: "User not found" }, { status: 404 });
@@ -34,4 +35,25 @@ export async function PUT(request: NextRequest, { params }: any) {
   } catch (error) {
     NextResponse.json({ message: "error", error: error }, {status: 500});
   }
+}
+
+
+export async function GET(res:NextResponse, {params}: any, ){
+  const data = connectdb()
+     await data
+   
+
+    try {
+        const {id} = params
+     
+        const product = await User.findById(id );
+      
+            
+        
+        return NextResponse.json(product)
+        
+    } catch (error) {
+         return  NextResponse.json("Product not found", {status: 404});
+        
+    }
 }

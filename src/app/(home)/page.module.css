@@ -14,7 +14,6 @@
 .btn{
     padding: 10px 200px;
     background-color: #F37E11 ;
-    font-weight: bold;
     border-radius:10px ;
     display: flex;
     gap: 0.75rem;

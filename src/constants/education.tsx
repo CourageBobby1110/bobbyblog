@@ -1,61 +1,64 @@
-import { Icon } from "lucide-react";
+import { Bold, Icon } from "lucide-react";
+import { GiTeacher } from "react-icons/gi";
+import { GiArchiveResearch } from "react-icons/gi";
+import { MdOutlinePersonSearch } from "react-icons/md";
+import { LiaSchoolSolid } from "react-icons/lia";
+import { GrResources } from "react-icons/gr";
+import { SiSemanticscholar } from "react-icons/si";
+import { IoBookSharp } from "react-icons/io5";
+import { GiBookshelf } from "react-icons/gi";
+import { IoChatboxOutline } from "react-icons/io5";
+import { TbBrandJavascript } from "react-icons/tb";
+import { FaDiscourse } from "react-icons/fa";
 
 export const education = [
     {
-        icon: "/personnel.svg",
+        icon: <GiTeacher color="white" />,
         title: "Become a Tutor",
         path: "/tutor",
     },
 
     {
-        icon: "/people.svg",
+        icon: <MdOutlinePersonSearch color="white"  />  ,
         title: "Find a Tutor",
         path: "/search-tutor",
     },
-    {
-        icon: "education.svg",
-        title: "Available Universities",
-        path: "/available-universities",
-    },
+   
 
     {
-        icon: "/education.svg",
+        icon: <GrResources color="white" />,                                       
         title:"Educational Resources",
         path: "/education-resources",
 
     },
     {
-        icon:"/research.svg",
+        icon: <GiArchiveResearch color="white" />,
         title:"Research Papers",
-        path: "/research-papers",
+        path: "/research-papers", 
 
     },
+ 
+   
     {
-        icon:"/scholarship.svg",
-        title:"Scholarship Opportunities",
-        path: "/scholarship-opportunities",
-    },
-    {
-        icon:"books.svg",
-        title:"Buy Books",
-        path: "/Buy-Books",
-
-    },
-    {
-        icon:"/courses.svg",
+        icon:  <IoBookSharp color="white" />,
         title:"Buy Courses",
         path: "/Buy-courses",
 
     },
     {
-        icon:"/ebook.svg",
+        icon:<GiBookshelf color="white" />,
         title:"Free e-books",
         path:"/Free-ebooks"
 
     },
     {
-        icon:"/chatcommunication.svg",
+        icon:<IoChatboxOutline  color="white" fontWeight={800}/>,
         title:"Find a student Chat Room",
         path: "/find-student-chat",
+    },
+    {
+        icon:  <TbBrandJavascript color="white" />,
+        title:"Learn Coding",
+        path: "/webdevelopment"
     }
 ]

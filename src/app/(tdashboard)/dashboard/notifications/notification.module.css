@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 2rem;
+    
+}
+.board{
+    padding: 2rem;
+}

@@ -35,12 +35,7 @@ const Sidebar = () => {
                 pathname === item.path ? `${styles.active}` : `${styles.empty}`
               }
             >
-              <Image
-                src={item.icon || ""}
-                alt=""
-                width={20}
-                height={20}
-              ></Image>
+              {item.icon}
               <Link href={item.path} onClick={closeMenu}>{item.name}</Link>
             </div>
           ))}

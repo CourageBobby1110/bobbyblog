@@ -1,10 +1,11 @@
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Open_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Poppins({
+const inter = Roboto({
   weight: '400',
+ 
   subsets: ['latin'],
 })
 
@@ -21,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
          
-      <body className={montserrat.className}>
-        <Navbar/>
+      <body className={inter.className}>
+        <Navbar />
         {children}
         </body>
     </html>

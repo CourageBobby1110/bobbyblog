@@ -12,6 +12,7 @@ import { Updatetutor } from "./gettadmin";
 interface Inputs  {
   
  isVerified: string;
+ ispaid: string;
 };
 
 interface PageProps{
@@ -37,7 +38,7 @@ const TutorForm = ({id}: PageProps) => {
     
     // Simulate a delay for server response
    
-   await  Updatetutor({id: id, isVerified: data.isVerified } )
+   await  Updatetutor({id: id, isVerified: data.isVerified, ispaid:data.ispaid } )
     toast.success("User updated successfully")
    
    
@@ -59,6 +60,14 @@ const TutorForm = ({id}: PageProps) => {
           placeholder="Verify User eg: True/False"
         />
         {errors.isVerified && <p>{errors.isVerified.message}</p>}
+      </div>
+      <div>
+        <input
+          type="text"
+          {...register("ispaid", { required:'ispaid is Required',   validate: value => value === "true"|| value === "false" || "Value must be true or false" }, )}
+          placeholder="Verify payment eg: True/False"
+        />
+        {errors.ispaid && <p>{errors.ispaid.message}</p>}
       </div>
       
      

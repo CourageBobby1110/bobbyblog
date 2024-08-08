@@ -1,53 +1,60 @@
 import { icons } from "lucide-react";
-
-
-export const  Nav = [
+import { MdDashboard } from "react-icons/md";
+import { MdOutlinePostAdd } from "react-icons/md";
+import { LiaChalkboardTeacherSolid } from "react-icons/lia";
+import { PiStudentBold } from "react-icons/pi";
+import { GoSmiley } from "react-icons/go";
+import { FaRegUser } from "react-icons/fa";
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { CiShop } from "react-icons/ci";export const  Nav = [
     {
         name: "Dashboard",
         path: "/admin",
-        icon: 'dashboard.svg'
+        icon: <MdDashboard />
         
     },
     {
         name: "Add Post",
         path: "/dashboard",
-        icon: 'add.svg'
+        icon: <MdOutlinePostAdd />
         
     },
 
 {
     name: "Orders",
     path: "/Orders",
-    icon: 'order.svg'
+    icon:   <CiShop />
     
 },
 {
     name: "tutors",
     path: "/tutorsadmin",
-    icon: 'personnel.svg'
+    icon:<LiaChalkboardTeacherSolid />
 },
 {
     name: "Students",
     path: "/students",
-    icon: 'people.svg'
+    icon:  <PiStudentBold />
     
 },
 {
     name: "Customers",
     path: "/customers",
-    icon: 'customer.svg'
+    icon: <GoSmiley />
     
 },
 {
     name: "Users",
     path: "/users",
-    icon: 'user.svg'
+    icon: <FaRegUser />
+
     
 },
 {
     name: "Revenue",
     path: "/revenue",
-    icon: 'sales.svg'
+    icon:  <FaMoneyBillTrendUp />
     
 },
 
@@ -57,7 +64,7 @@ export const  Nav = [
 {
     name: "Account",
     path: "/account",
-    icon: 'account.svg'	
+    icon:  <MdOutlineManageAccounts />
   
     
 },

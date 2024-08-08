@@ -21,7 +21,7 @@ const Tutordashboard =  async () => {
             Your account has been created successfully. we will review and notify you if you have been Approved
           </p>
           <div className={styles.link}>
-            <Link href="/">Go back Home</Link>
+            <Link href="/" className={styles.a}    >Go back Home</Link>
           </div>
         </div>
 

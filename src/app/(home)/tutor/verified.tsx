@@ -21,7 +21,7 @@ const TutorVerified =  async () => {
             You have been Verified.
           </p>
           <div className={styles.link}>
-            <Link href={`tutor/dashboard/${p?.id}`}>Go to your Dashboard</Link>
+            <Link href={`/dashboard/${p?.id}`}>Go to your Dashboard</Link>
           </div>
         </div>
 

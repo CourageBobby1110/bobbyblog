@@ -221,23 +221,21 @@ justify-content: space-around;
         padding: 1.5rem 0 1.5rem 0;
         
         
-        transition: 0.5s ease  all;
+        transition: 0.5s eas;
        
         top: 2.5rem;
       
        
     }
+   
+      
+     
     .education .edulinks{
         display: flex;
         align-items: center;
         gap: 0.75rem;
     }
-    .educationLink{
-       
-        
-       
-        
-    }
+   
     /* .educationLink:hover .education,
 .education:hover {
     display: grid;
@@ -248,13 +246,25 @@ justify-content: space-around;
     display: grid;
     width: 100%;
     padding: 1rem;
-    background-color: #F2A359;
+    background-color: white;
     border-radius: 0.7rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
 
 grid-template-columns: auto auto auto auto;
-gap: 5rem;
+transition: 0.4s all ease-out;
+
+gap: 3rem;
 }
 
+.icondiv{
+    background-color: #fa9639;
+    padding: 0.2rem;
+    
+    border-radius: 0.2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
     
 }
+
+

@@ -1,0 +1,52 @@
+.bar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 5rem;
+    font-weight: bold;
+    border-radius: 0.7rem;
+    
+  
+ 
+}
+
+.bar ul{
+    
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    gap: 2.5rem;
+    text-transform: uppercase;
+  
+
+}
+
+
+.tsc{
+    padding: 1rem;
+    width: 100%;
+    
+    
+
+}
+.bar ul div{
+    display: flex;
+   
+    align-items: center;
+    gap: 0.25rem;
+    
+}
+
+.bar ul a{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.active{
+    color: #f07b0d;
+}
+.bar ul div .image {
+    border-radius: 50%;
+}

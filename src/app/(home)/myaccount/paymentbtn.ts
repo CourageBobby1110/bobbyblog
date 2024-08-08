@@ -1,11 +1,21 @@
+
+
+
+
+
+
 interface Inputs{
-    
-    id: string;
-    isVerified: string;
+   
+    id: string | undefined ;
+   
+   
     ispaid: string;
+   
 }
 
-export const Updatetutor = async ( { isVerified, ispaid, id}: Inputs ) =>{
+
+
+export  async  function UpdatedPay( {id, ispaid}: Inputs ){
     if (!id) {
         console.error('ID is undefined');
         return;
@@ -18,9 +28,7 @@ export const Updatetutor = async ( { isVerified, ispaid, id}: Inputs ) =>{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-            
-              isVerified,
-              ispaid
+             paid: ispaid
             })
         })
   

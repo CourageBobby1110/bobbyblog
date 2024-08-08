@@ -12,6 +12,9 @@ interface user{
     updatedAt: Date;
     _id: string;
     courses : [string];
+    message : [string]
+    tutor: [{}]
+   
 }
 
 const userSchema = new mongoose.Schema<user>({
@@ -21,6 +24,10 @@ const userSchema = new mongoose.Schema<user>({
     email:{type: String, required: true, unique: true},
     image: {type: String,},
     courses : {type: [], },
+    message : {type: []},
+    tutor: {type: [{}]},
+  
+    
     role: {
         type: String,
         enum: ['user', 'admin', 'Tutor'], // Adjust roles as needed

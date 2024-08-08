@@ -1,6 +1,6 @@
 import { Montserrat, Poppins } from "next/font/google"
 import "./globals.css";
-import Sidenav from "./components/sidenav";
+import Sidenav from "../(tdashboard)/components/sidenav";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 

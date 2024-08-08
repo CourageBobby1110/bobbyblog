@@ -53,7 +53,7 @@ const getUsers = async() => {
      
   return (
    <div>
-    <p>{stringdata}</p>
+    <div>{stringdata}</div>
    </div>
   )
 }

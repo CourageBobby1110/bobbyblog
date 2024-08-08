@@ -17,8 +17,12 @@ import { education } from '@/constants/education';
 
 
 
+
 interface HamburgerMenuProps {
   onToggle: (isOpen: boolean) => void;
+}
+interface z{
+  x: string;
 }
 
 
@@ -69,7 +73,7 @@ const Navbar = () => {
     <Link href='#' className= {styles.educationLink} onMouseEnter={()=>setShowEducation(true)} onMouseLeave={()=> setShowEducation(false)}>Education</Link>
 
      {
-      <div><Link href=''>Dashboard</Link></div>
+      <div><Link href={`${`/dashboard/${user?.id}`}`}>Dashboard</Link></div>
      }
 
 
@@ -81,7 +85,9 @@ const Navbar = () => {
           {
           education.map((z) => (
             <Link   key={z.title}  href={z.path} className={styles.edulinks} onClick={()=>setShowEducation(false)}>
-              <Image src={z.icon || ""} alt='education logo' width={40} height={40} /> 
+              <div className={styles.icondiv}>
+              {z.icon}
+              </div>
             
               <p>{z.title}</p>
             </Link>
