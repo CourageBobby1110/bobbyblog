@@ -51,15 +51,17 @@ const Trending = ({ posts }: posttype) => {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {posts.map((posts) => (
-          <SwiperSlide className={styles.featured} key={posts.title}>
-            <div className={styles.imagewrapper}>
+          <SwiperSlide  key={posts.title}>
+        <div className={styles.featured}>
+        <div className={styles.imagewrapper}>
             <Image  className={styles.image}  src={posts.image[0]} alt='toparticles'  fill />
     </div>
       <div className={styles.content}>
         <h2>{posts.title}</h2>
-      <p>{posts.body}</p>
+      <p>{`${posts.body.slice(0, 200)}....`}</p>
      <button>Read More</button>
       </div>
+        </div>
 
            
 

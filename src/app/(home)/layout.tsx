@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Open_Sans, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const inter = Roboto({
   weight: '400',
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer/>
         </body>
     </html>
   );

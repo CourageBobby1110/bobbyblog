@@ -9,6 +9,7 @@ import { addUser} from "./getUser";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 interface posts{
+  _id: string;
   title: string;
   body: string;
   date: string;
@@ -61,7 +62,7 @@ await addUser({ firstName: ctx?.given_name, lastName: ctx?.family_name, email: c
          <Trending posts={trendingdata}/>
          <DailyNews posts={data} />
          <Toparticles posts={recentdata}/>
-         <Footer/>
+        
       
      
     </main>

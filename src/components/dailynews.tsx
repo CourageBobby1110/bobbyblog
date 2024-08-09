@@ -2,8 +2,11 @@ import React from 'react'
 import styles from '@/components/dailynews.module.css'
 import { posts } from '../models/posts';
 import Image from 'next/image';
+import Link from 'next/link';
+import { trimmedText } from '@/lib/trimmedtext';
 
 interface posts{
+  _id: string;
   title: string;
   body: string;
   date: string;
@@ -17,6 +20,7 @@ interface posttype{
 }
 
 const DailyNews = ({posts}: posttype) => {
+
   return (
     <div className={styles.main}>
         <div className={styles.daily}>
@@ -33,8 +37,8 @@ const DailyNews = ({posts}: posttype) => {
               </div>
                 <div className={styles.content}>
                   <h3>{posts.title}</h3>
-                <p>{posts.body}</p>
-               <button>Read More</button>
+                <p>{`${posts.body.slice(0, 200)}....`}</p>
+              <Link href={`/posts/${posts._id}`}> <button>Read More</button></Link>
                 </div>
           
               </div>
