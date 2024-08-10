@@ -18,6 +18,7 @@
     align-items: center;
     text-align: center;
     padding: 0.7rem;
+    gap: 1.5rem;
 }
 .main h1{
     font-size: 30px;
@@ -38,4 +39,41 @@
 }
 .body p{
     margin-bottom: 12px;
+}
+.sharepost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.social{
+    display: flex;
+   
+    align-items: center;
+    gap: 1rem;
+}
+.social a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.link{
+    text-align: center;
+  
+    width: fit-content;
+    padding: 2rem;
+
+}
+.gohome{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.date{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 60%;
+    padding-bottom: 0.75rem;
+
 }

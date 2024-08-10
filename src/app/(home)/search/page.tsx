@@ -1,8 +1,11 @@
+import ComingSoon from '@/components/comingsoon'
 import React from 'react'
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div>
+      <ComingSoon/>
+    </div>
   )
 }
 

@@ -1,8 +1,11 @@
+import ComingSoon from '@/components/comingsoon'
 import React from 'react'
 
 const AvailableUniversities = () => {
   return (
-    <div>AvailableUniversities</div>
+    <div>
+      <ComingSoon/>
+    </div>
   )
 }
 
