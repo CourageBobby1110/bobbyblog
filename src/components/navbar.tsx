@@ -66,14 +66,15 @@ const Navbar = () => {
          if (!requiredPermissions|| requiredPermissions.every((p) => permissions?.includes(p)))
          return(
           <li key={id} onClick={closeMenu}>
-           <Link href={path} className={pathname=== path ? `${styles.active}` : `${styles.empty}` }>{name}</Link>
+           <Link href={path || ''} className={pathname=== path ? `${styles.active}` : `${styles.empty}` }>{name}</Link>
           </li>)
        })
     }
     <Link href='#' className= {styles.educationLink} onMouseEnter={()=>setShowEducation(true)} onMouseLeave={()=> setShowEducation(false)}>Education</Link>
 
      {
-      <div><Link href={`${`/dashboard/${user?.id}`}`}>Dashboard</Link></div>
+      permissions ?
+      <div><Link href={`${`/dashboard/${user?.id}`}`}>Dashboard</Link></div> : ''
      }
 
 

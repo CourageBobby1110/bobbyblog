@@ -79,6 +79,23 @@
     flex-wrap: wrap;
   
 }
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    
+}
+.btn button{
+    background-color: #F37E11;
+    padding: 0.5rem 2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.7rem;
+
+
+}
 
 @media screen and (max-width: 25rem) {
 

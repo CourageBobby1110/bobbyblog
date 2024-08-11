@@ -1,3 +1,7 @@
+
+
+
+
 export const Nav = [
 
 
@@ -42,7 +46,8 @@ export const Nav = [
         requiresAuth: true,
   
 
-    }
+    },
+   
 
 
 

@@ -41,8 +41,21 @@ const ProductPage = async({params: {id}} : PageProps ) =>{
   return(
     <div className={styles.board}>
       <div className={styles.main}>
-        <p>{z.isVerified}</p>
-        <p>{z.courses[0]}</p>
+      {
+      z.message.length === 0 && z.role === 'tutor' &&  <div>You have no notifications for now</div>
+     
+      
+     }
+    {
+       z.message.length > 0 && z.role ==='tutor ' && <div>{z.message}</div>
+    }
+    {
+      z.message.length === 0 && z.role === 'user' && <div>You have no notifications for now</div>
+    }
+    {
+      z.message.length > 0 && z.role === 'user' && <div>{z.message}</div>	
+    }
+      
 
       </div>
         

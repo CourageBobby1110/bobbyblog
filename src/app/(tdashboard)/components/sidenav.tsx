@@ -13,8 +13,11 @@ import Image from 'next/image';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 interface z{
   x: string | undefined;
+  detail: any
 }
-const Sidenav =  ({x}: z) => {
+const Sidenav =  ({x,detail}: z) => {
+
+  
   const pathname = usePathname();
   const {user} = useKindeBrowserClient();
   
@@ -31,7 +34,12 @@ const Sidenav =  ({x}: z) => {
         <Link href={`/dashboard/notifications/${x}`} className={pathname === `/dashboard/notifications/${x}` ? `${styles.active}` : `${styles.empty} ` }><IoIosNotifications /> Notifications</Link>
        
 
-        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your Students</Link>
+       {
+        detail?
+        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your students</Link> :
+        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your Tutors</Link>
+
+       } 
      
       </ul>
     </div>

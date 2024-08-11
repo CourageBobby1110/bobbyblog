@@ -5,7 +5,22 @@ import Sidenav from "../(tdashboard)/components/sidenav";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 
+const getUserById = async (id: string| undefined) =>{
+  try {
+      const res = await fetch(`http://localhost:3000/api/user/${id}`, 
+        {
+          cache: 'no-store'
+        }
+      )
+      return res.json()
+      
+  } catch (error) {
+      console.log(error);
+      
+  }
 
+
+}
 
 export const metadata = {
   title: 'Next.js',
@@ -22,12 +37,14 @@ export default async  function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   const {getUser} = getKindeServerSession()
   const user = await getUser()
+  const z = await getUserById(user?.id)
   return (
     <html lang="en" className={poppins.className}>
       <body>
-      <Sidenav x={user?.id.toString() }/>
+      <Sidenav x={user?.id.toString()  } detail={z.role === 'tutor'}/>
         {children}
         </body>
     </html>
