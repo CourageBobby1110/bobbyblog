@@ -16,7 +16,7 @@ import { CiShop } from "react-icons/ci";export const  Nav = [
     },
     {
         name: "Add Post",
-        path: "/dashboard",
+        path: "/addpost",
         icon: <MdOutlinePostAdd />
         
     },

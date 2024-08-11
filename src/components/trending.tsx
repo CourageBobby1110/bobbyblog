@@ -16,8 +16,10 @@ import "swiper/css/scrollbar";
 import Image from "next/image";
 import styles from "./featuredpost.module.css";
 import { posts } from "../models/posts";
+import Link from "next/link";
 
 interface posts {
+  _id : string;
   title: string;
   body: string;
   date: string;
@@ -59,7 +61,7 @@ const Trending = ({ posts }: posttype) => {
       <div className={styles.content}>
         <h2>{posts.title}</h2>
       <p>{`${posts.body.slice(0, 200)}....`}</p>
-     <button>Read More</button>
+     <button><Link  href={`/posts/${posts._id}`}     >Read more</Link></button>
       </div>
         </div>
 

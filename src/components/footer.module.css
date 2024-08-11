@@ -42,10 +42,11 @@
 
 .inputdiv{
     display: flex;
-    align-items: center;
+    
     gap: 0.75rem;
     flex-wrap: wrap;
-    justify-content: center;
+    
+    
 }
 .inputdiv input{
     width: 25rem;
@@ -67,7 +68,53 @@
     color: white;
 
 }
+.boxdiv{
+    display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: 0.4s ease-in all;
+   
+}
+.boxdiv p{
+    color: orangered;
+    font-weight: 500;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+   
+    padding: 2rem 1rem;
+    border-top: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+}
+
+.socialicons{
+    display: flex;
+    gap: 2.5rem;
+    
+}
+
+.socialicons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.board{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+   
+
+}
 @media  screen and (max-width: 48rem) {
     .inputdiv input{
         width: 19rem;
