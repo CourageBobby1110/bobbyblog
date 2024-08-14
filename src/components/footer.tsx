@@ -103,7 +103,7 @@ const Footer = () => {
       <h2>Connect with me :</h2>
         <div className={styles.socialicons}>
         <Link href={'/'}> <FaFacebook />Facebook</Link>
-        <Link href={'/'}  ><FaXTwitter />X</Link>
+        <Link href={'/'}  ><FaXTwitter /></Link>
         <Link href={'/'}   ><FaInstagramSquare />Instagram</Link>
         <Link href={'/'}        > <FaLinkedin />               LinkedIn</Link>
         </div>
