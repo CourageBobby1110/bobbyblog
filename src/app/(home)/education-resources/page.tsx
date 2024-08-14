@@ -1,12 +1,12 @@
 import ComingSoon from '@/components/comingsoon'
 import React from 'react'
 
-const EducationResources = () => {
+const EducationalResources = () => {
   return (
     <div>
-      <ComingSoon/>
+        <ComingSoon/>
     </div>
   )
 }
 
-export default EducationResources
+export default EducationalResources

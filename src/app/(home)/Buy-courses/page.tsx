@@ -4,7 +4,8 @@ import React from 'react'
 const BuyCourses = () => {
   return (
     <div>
-      <ComingSoon/>
+
+        <ComingSoon/>
     </div>
   )
 }

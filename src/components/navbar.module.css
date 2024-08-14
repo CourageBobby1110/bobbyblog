@@ -265,6 +265,14 @@ justify-content: space-around;
    
    
 }
+@media screen and (max-width: 28rem){
+    .header h1{
+        font-size: 20px;
+        padding-top: 10px;
+        width: 200px;
+    }
+    
+}
 
 
 
@@ -390,7 +398,7 @@ justify-content: space-around;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
 
-grid-template-columns: auto auto auto auto;
+grid-template-columns: auto auto auto auto auto;
 transition: 0.4s all ease-out;
 
 gap: 3rem;

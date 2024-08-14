@@ -19,12 +19,12 @@ const Sdashboard = async ({user, id}: PageProps) => {
     <Image src='/roseflower0.svg' alt='rose' fill className={styles.image}></Image>
     </div>
      <h1>Welcome to your Dashboard</h1>
-     <p>You have {user.tutor.length} Tutors </p>
+     <p>You are amazing 😊</p>
  
 
     </div>
 
-  <Link href={`/yourstudents/${id}`} className={styles.schedule}>
+  <Link href={`/dashboard/yourstudents/${id}`} className={styles.schedule}>
   <div className={styles.Imagewrapper}>
     <Image src='/roseflower1.svg' alt='rose' fill className={styles.image}></Image>
     </div>
@@ -33,10 +33,12 @@ const Sdashboard = async ({user, id}: PageProps) => {
   <div >
 
      
-     <h1>Your Tutors</h1>
-     <p>Here you will see your Tutors and the time you are to have a class with them</p>
+     <h1>Your Courses</h1>
+     <p>fill up a form to get started</p>
     </div>
   </Link>
+
+  <Link href={'/'} className={styles.home}>Go home</Link>
 
   
 

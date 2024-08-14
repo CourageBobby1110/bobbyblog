@@ -27,7 +27,7 @@ export default async  function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <body>
-      <Sidenav x={user?.id.toString() }/>
+      <Sidenav x={user?.id.toString()} detail={undefined}/>
         {children}
         </body>
     </html>

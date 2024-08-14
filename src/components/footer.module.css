@@ -1,126 +1,277 @@
-.footermain{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    padding: 2rem 1rem 1rem 1rem  ;
-    font-weight: bold;
-    flex-wrap: wrap;
-}
-
-.container{
-    background-color: #e9ad75;
-    height: 400px;
-    width: 100%;
-    border-radius: 0.75rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.all{
+@media screen and (min-width: 48rem){
+    .footermain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        padding: 2rem 1rem 1rem 1rem  ;
+        font-weight: bold;
+        flex-wrap: wrap;
+    }
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-
-}
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.content h2{
-    font-size: 20px;
-  
-
-}
-
-.inputdiv{
-    display: flex;
+    .container{
+        background-color: #e9ad75;
+        height: 400px;
+        width: 100%;
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
     
-    gap: 0.75rem;
-    flex-wrap: wrap;
+    .all{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex-wrap: wrap;
     
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .content h2{
+        font-size: 20px;
+      
     
-}
-.inputdiv input{
-    width: 25rem;
-    height: 3rem;
-    border-radius: 0.25rem;
-    padding: 0.15rem;
-    border: none;
+    }
     
-}
-
-.inputdiv input:focus{
-    outline: 2px solid #f8993f;
-}
-.inputdiv button{
-    background-color: #f8993f;
-    height: 3rem;
-    width: 4rem;
-    border-radius: 0.25rem;
-    color: white;
-
-}
-.boxdiv{
-    display: flex;
-   
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    transition: 0.4s ease-in all;
-   
-}
-.boxdiv p{
-    color: orangered;
-    font-weight: 500;
-}
-.social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    width: 100%;
-   
-    padding: 2rem 1rem;
-    border-top: 1px solid grey;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-}
-
-.socialicons{
-    display: flex;
-    gap: 2.5rem;
+    .inputdiv{
+        display: flex;
+        
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .inputdiv input{
+        width: 25rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        padding: 0.15rem;
+        border: none;
+        
+    }
     
-}
-
-.socialicons a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-}
-
-.board{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-   
-
+    .inputdiv input:focus{
+        outline: 2px solid #f8993f;
+    }
+    .inputdiv button{
+        background-color: #f8993f;
+        height: 3rem;
+        width: 4rem;
+        border-radius: 0.25rem;
+        color: white;
+    
+    }
+    .boxdiv{
+        display: flex;
+       
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: 0.4s ease-in all;
+       
+    }
+    .boxdiv p{
+        color: orangered;
+        font-weight: 500;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        width: 100%;
+       
+        padding: 2rem 1rem;
+        border-top: 1px solid grey;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+    
+    .socialicons{
+        display: flex;
+        gap: 2.5rem;
+        
+    }
+    
+    .socialicons a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    
+    .board{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    
+    }
 }
 @media  screen and (max-width: 48rem) {
+    .footermain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        padding: 2rem 1rem 1rem 1rem  ;
+        font-weight: bold;
+        flex-wrap: wrap;
+    }
     .inputdiv input{
         width: 19rem;
     }
     .inputdiv{
         flex-direction: column;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .board{
+        font-size: 16px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .container{
+        font-weight: 500;
+        font-size: 16px;
+
+    }
+    .container{
+        background-color: #e9ad75;
+        height: 300px;
+        width: 100%;
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .all{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    
+    }
+    .content h2{
+        font-size: 20px;
+      
+    
+    }
+    
+    .inputdiv{
+        display: flex;
+        
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .inputdiv input{
+        width: 23rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        padding: 0.15rem;
+        border: none;
+        
+    }
+    
+    .inputdiv input:focus{
+        outline: 2px solid #f8993f;
+    }
+    .inputdiv button{
+        background-color: #f8993f;
+        height: 3rem;
+        width: 4rem;
+        border-radius: 0.25rem;
+        color: white;
+    
+    }
+    .boxdiv{
+        display: flex;
+       
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: 0.4s ease-in all;
+       
+    }
+    .boxdiv p{
+        color: orangered;
+        font-weight: 500;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        width: 100%;
+       
+        padding: 2rem 1rem;
+        border-top: 1px solid grey;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+    
+    .socialicons{
+        display: flex;
+        gap: 2.5rem;
+        
+    }
+    
+    .socialicons a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    
+    .board{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    
+    }
+    
+    
+}
+@media screen and (max-width: 25rem){
+    .inputdiv input{
+        width: 18rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        padding: 0.15rem;
+        border: none;
+        
+    }
+    .board{
+        font-size: 12px;
     }
     
 }

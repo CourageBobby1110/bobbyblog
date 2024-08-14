@@ -71,7 +71,7 @@
     width: 300px;
     height: 50px;
     color: white;
-    border-radius: 15px;
+    border-radius: 0.2rem;
     font-weight: bold;
 }
 .content p{
@@ -92,7 +92,7 @@
     padding: 0.5rem 2rem;
     color: white;
     font-weight: bold;
-    border-radius: 0.7rem;
+    border-radius: 0.2rem;
 
 
 }
@@ -137,6 +137,27 @@
         font-size: 20px;
         text-transform: uppercase;
     }
+    .featuredpost{
+
+    }
+    .imagewrapper{
+        height: 15rem;
+    }
+    .content p{
+        font-size: 16px;
+        
+
+    }
+    .content button{
+        background-color: #F37E11;
+        width: 200px;
+        height: 50px;
+        color: white;
+        border-radius: 0.2rem;
+        font-weight: bold;
+        font-size: 15px;
+    }
+   
 
     
 }

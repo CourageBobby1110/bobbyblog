@@ -106,7 +106,7 @@
     width: 300px;
     height: 50px;
     color: white;
-    border-radius: 15px;
+    border-radius: 0.2rem;
     font-weight: bold;
 }
 .content h2{
@@ -114,6 +114,7 @@
 }
 .content p  {
  text-align: center;
+ 
 }
 
 
@@ -148,7 +149,12 @@
         width: 100%;
 
     }
+   
 
+    
+}
+
+@media screen and (max-width: 28rem){
     
 }
 

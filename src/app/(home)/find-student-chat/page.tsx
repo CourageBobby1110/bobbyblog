@@ -1,12 +1,12 @@
 import ComingSoon from '@/components/comingsoon'
 import React from 'react'
 
-const FindStudentChat = () => {
+const FindStudents = () => {
   return (
     <div>
-      <ComingSoon/>
+        <ComingSoon/>
     </div>
   )
 }
 
-export default FindStudentChat
+export default FindStudents

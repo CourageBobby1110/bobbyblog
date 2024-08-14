@@ -1,12 +1,13 @@
-import ContactUs from '@/components/contactUs'
 import React from 'react'
+import ContactUs from '@/components/contactUs'
 
-const Contacts = () => {
+const Contact = () => {
   return (
     <div>
-      <ContactUs/>
+        <ContactUs/>
+        
     </div>
   )
 }
 
-export default Contacts
+export default Contact

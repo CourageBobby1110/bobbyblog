@@ -1,12 +1,12 @@
 import ComingSoon from '@/components/comingsoon'
 import React from 'react'
 
-const FreeEbooks = () => {
+const FreeEbook = () => {
   return (
     <div>
-      <ComingSoon/>
+        <ComingSoon/>
     </div>
   )
 }
 
-export default FreeEbooks
+export default FreeEbook

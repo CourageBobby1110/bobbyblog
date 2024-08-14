@@ -67,3 +67,12 @@
 justify-content: space-evenly;
 
 }
+.home{
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    background-color:#f07b0d ;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.2rem;
+}

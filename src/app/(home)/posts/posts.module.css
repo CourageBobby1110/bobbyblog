@@ -77,3 +77,34 @@
     padding-bottom: 0.75rem;
 
 }
+@media screen and (max-width: 48rem){
+    .Imagewrapper{
+        width: 80%;
+        height: 20rem;
+    }
+    .body{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 28rem){
+    .body p{
+        font-size: 16px;
+       
+    }
+    .Imagewrapper{
+        height: 15rem;
+        width: 100%;
+    }
+    .body{
+        width: 100%;
+       
+    }
+    .sharepost .social a {
+        font-size: 12px;
+    }
+    .sharepost p{
+        font-size: 12px;
+    }
+}

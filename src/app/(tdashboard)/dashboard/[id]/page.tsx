@@ -43,7 +43,7 @@ const Tutordashboard =  async ({params: {id}}: PageProps) => {
   return (
     <div>
       {
-        user.role === 'tutor'? (<Card user={user} id={user.id}/>	) : (<Sdashboard user={user} id={user.id}/>)
+         <Sdashboard user={user} id={user._id}/>
       }
     </div>
   )

@@ -53,7 +53,7 @@ const Footer = () => {
             <div className={styles.boxdiv}>
             <input   {...register("email", { required:'email is required',   validate: value => value.includes('@') }, )}
              type="text" placeholder='Email address' />
-              {errors.email && <p>{errors.email.message}</p>}
+              
             </div>
               <button disabled={isSubmitting} type="submit" className={styles.btn} >
           {isSubmitting ? (

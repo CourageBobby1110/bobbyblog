@@ -34,12 +34,12 @@ const Sidenav =  ({x,detail}: z) => {
         <Link href={`/dashboard/notifications/${x}`} className={pathname === `/dashboard/notifications/${x}` ? `${styles.active}` : `${styles.empty} ` }><IoIosNotifications /> Notifications</Link>
        
 
-       {
-        detail?
-        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your students</Link> :
-        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your Tutors</Link>
+      
+        
+        <Link href={`/dashboard/yourstudents/${x}`} className={pathname === `/dashboard/yourstudents/${x}` ? `${styles.active}` : `${styles.empty}` }><PiStudentFill />Your Courses</Link> 
+        
 
-       } 
+       
      
       </ul>
     </div>

@@ -12,17 +12,9 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { FaDiscourse } from "react-icons/fa";
 
 export const education = [
-    {
-        icon: <GiTeacher color="white" />,
-        title: "Become a Tutor",
-        path: "/tutor",
-    },
+   
 
-    {
-        icon: <MdOutlinePersonSearch color="white"  />  ,
-        title: "Find a Tutor",
-        path: "/search-tutor",
-    },
+  
    
 
     {
@@ -56,9 +48,5 @@ export const education = [
         title:"Find a student Chat Room",
         path: "/find-student-chat",
     },
-    {
-        icon:  <TbBrandJavascript color="white" />,
-        title:"Learn Coding",
-        path: "/webdevelopment"
-    }
+   
 ]
