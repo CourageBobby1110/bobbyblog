@@ -1,13 +1,19 @@
 import React from 'react'
-import styles from './comingsoon.module.css'
+import styles from './coming.module.css'
 import Image from 'next/image'
+import { MdConstruction } from "react-icons/md";
 
 const ComingSoon = () => {
   return (
     <div className={styles.board}>
         <div className={styles.coming}>
-        <div className={styles.imagewrapper}>
-            <Image  src='/poppyflower.svg' alt='image' fill className={styles.image}></Image>
+
+
+        <div className={styles.icondiv}>
+          <div>
+          <MdConstruction className={styles.icon}/>
+          </div>
+          
         </div>
 
         <div className={styles.soon}>

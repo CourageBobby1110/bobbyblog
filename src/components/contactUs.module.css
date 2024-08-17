@@ -1,25 +1,36 @@
 .board{
     display: flex;
     justify-content: center;
-    align-items: center;
+   
     padding: 1rem;
     
 }
 
 .main{
     display: flex;
-    align-items: center;
+  
     background-color: whitesmoke;
-    width: 60%;
+    width: 90%;
     gap: 1rem;
     flex-direction: column;
+    border-radius: 0.5rem;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 
 }
+
 .content{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    text-align: center;
+}
+.content h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.content p{
+    font-size: 50px;
 }
 .imagewrapper{
     position: relative;
@@ -29,4 +40,13 @@
 }
 .image{
     object-fit: cover;
+}
+
+@media screen and (max-width: 48rem){
+    .content p{
+        font-size: 18px;
+    }
+    .content h1{
+        font-size: 25px;
+    }
 }

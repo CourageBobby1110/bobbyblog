@@ -20,6 +20,9 @@ interface posts{
 }
 
 export default async function  Home () {
+  await new Promise<void>((resolve, reject) => {
+    setTimeout(resolve, 2000)
+  })
   const {getUser } =  getKindeServerSession();
   const data = await getPosts() as posts[]
 

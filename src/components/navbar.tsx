@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <div className={styles.header}>
       <div>
-        {" "}
+      
         <h1> Ravens Academy</h1>
       </div>
 
@@ -87,7 +87,7 @@ const Navbar = () => {
             return (
               <li key={id} onClick={closeMenu}>
                 <Link
-                  href={path || ""}
+                  href={path}
                   className={
                     pathname === path ? `${styles.active}` : `${styles.empty}`
                   }
@@ -113,13 +113,13 @@ const Navbar = () => {
           </div>
 
           <div className={`${styles.edu} ${showDropdown ? styles.lynx : ""}`}>
-            <div className={styles.linkdiv}>
+            <div className={styles.linkdiv}        onClick= {closeMenu}   >
               {education.map((z) => (
                 <Link
                   key={z.title}
                   href={z.path}
                   className={styles.edulinks}
-                  onClick={() => setShowEducation(false)}
+             
                 >
                   <div className={styles.icondiv}>{z.icon}</div>
 
@@ -170,7 +170,9 @@ const Navbar = () => {
               className={`${styles.dropdown} cursor-pointer`}
               onClick={handleClick}
             >
-              <div className="flex items-center gap-1">
+              <div className={`${styles.bottom
+
+              }  flex items-center gap-1        `}>
                 
                 {user?.picture && (
                   <div className={`${styles.prof}`}>

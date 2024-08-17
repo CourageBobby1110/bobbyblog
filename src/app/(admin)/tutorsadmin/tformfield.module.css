@@ -1,21 +1,16 @@
-.coming{
-   background-color: red;
-    
-}
-
-
-.board{
-    padding: 1rem;
+.form{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    padding-top: 3rem;
+
 }
-.soon{
+.form form {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 2rem;
 }
-.icon{
-    width: 50%;
-    height: 5rem;
-}
+

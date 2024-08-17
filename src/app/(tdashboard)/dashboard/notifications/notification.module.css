@@ -8,4 +8,12 @@
 }
 .board{
     padding: 2rem;
+    
+}
+
+@media screen and (max-width: 48rem) {
+    .board{
+        padding-top: 5rem;
+    }
+    
 }

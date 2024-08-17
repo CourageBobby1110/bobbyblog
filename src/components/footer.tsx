@@ -8,9 +8,11 @@ import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 import { Triangle } from 'react-loader-spinner';
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import {TwitterShareButton} from 'react-share'
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import Link from 'next/link';
+import { toast, Toaster } from 'sonner';
 interface Inputs{
   email: string;
   id: string;
@@ -31,7 +33,17 @@ const Footer = () => {
     
     // Simulate a delay for server response
    
-      addEmail({mail: data.email, userId: user?.id } )
+ try {
+  addEmail({mail: data.email, userId: user?.id } )
+  toast.success("Email added successfully")
+  
+  
+  
+ } catch (error) {
+  toast.error("Failed to add email")
+  
+ }
+ reset();
    
    
     // Handle the data here
@@ -41,6 +53,7 @@ const Footer = () => {
   };
   return (
     <div className={styles.main}>
+      <Toaster richColors/>
           <div className={styles.footermain}>
         <div className={styles.container}>
             <div className={styles.all}>
@@ -103,7 +116,10 @@ const Footer = () => {
       <h2>Connect with me :</h2>
         <div className={styles.socialicons}>
         <Link href={'/'}> <FaFacebook />Facebook</Link>
-        <Link href={'/'}  ><FaXTwitter /></Link>
+        
+        <TwitterShareButton url='http://localhost:3000' title='Ravens Academy' className={styles.link}>
+          <FaXTwitter />
+        </TwitterShareButton>
         <Link href={'/'}   ><FaInstagramSquare />Instagram</Link>
         <Link href={'/'}        > <FaLinkedin />               LinkedIn</Link>
         </div>

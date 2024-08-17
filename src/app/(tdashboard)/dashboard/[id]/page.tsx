@@ -1,9 +1,5 @@
 import React from 'react'
-import Sidenav from '../../components/sidenav';
-import styles from '../tdashboard.module.css'
-import Link from 'next/link';
-import Image from 'next/image';
-import Card from '../card';
+
 import Sdashboard from '@/app/(studentdashboard)/sdashboard/sdashboard';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { redirect } from 'next/navigation';

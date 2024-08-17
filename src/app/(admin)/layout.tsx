@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Sidebar from "./admin_component/sidebar";
-import { Poppins } from "next/font/google";
+import { Montserrat, Outfit, Poppins } from "next/font/google";
 
 import "./adminglobals.css";
-const poppins = Poppins({
+const poppins = Outfit({
   weight: '400',
   subsets: ['latin'],
 })

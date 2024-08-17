@@ -2,6 +2,7 @@ import { cache } from 'react';
 import styles from '../students.module.css'
 import Link from 'next/link';
 import ComingSoon from '@/components/comingsoon';
+import Construction from '@/components/construction';
 
 const getUserById = async (id: string) =>{
     try {

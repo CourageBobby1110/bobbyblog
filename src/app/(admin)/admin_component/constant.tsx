@@ -7,6 +7,8 @@ import { GoSmiley } from "react-icons/go";
 import { FaRegUser } from "react-icons/fa";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { MdOutlineManageAccounts } from "react-icons/md";
+import { MdHomeFilled } from "react-icons/md";
+
 import { CiShop } from "react-icons/ci";export const  Nav = [
     {
         name: "Dashboard",
@@ -15,7 +17,7 @@ import { CiShop } from "react-icons/ci";export const  Nav = [
         
     },
     {
-        name: "Add Post",
+        name: "Add",
         path: "/addpost",
         icon: <MdOutlinePostAdd />
         
@@ -39,7 +41,7 @@ import { CiShop } from "react-icons/ci";export const  Nav = [
     
 },
 {
-    name: "Customers",
+    name: "Posts",
     path: "/customers",
     icon: <GoSmiley />
     
@@ -68,6 +70,11 @@ import { CiShop } from "react-icons/ci";export const  Nav = [
   
     
 },
+{
+    name: "Go home",
+    path: "/",
+    icon: <MdHomeFilled />
+}
 
 
 

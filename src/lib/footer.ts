@@ -33,6 +33,10 @@ export const addEmail = async ( {mail, userId }: Inputs ) =>{
           console.log('user already exists')
           return;
         }
+        if(Xres.status === 400){
+            console.log('email already exists')
+            return;
+        }
         
         
        } catch (error) {

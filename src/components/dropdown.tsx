@@ -10,7 +10,7 @@ import styles from './navbar.module.css'
 const Dropdown = () => {
     const {user} = useKindeBrowserClient()
   return (
-      <div className={`flex flex-col ${styles.main} z-1000 ${styles.responsive}` }>
+      <div className={`flex flex-col text-center ${styles.main} z-1000 ${styles.responsive}` }>
         <ul className=" flex flex-col gap-4   ">
             <li> Hi {user?.given_name} 👋🏾</li>
             <li><><Link href='/profile'>Profile</Link></></li>

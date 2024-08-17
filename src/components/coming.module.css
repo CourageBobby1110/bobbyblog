@@ -1,0 +1,45 @@
+.coming{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  
+   
+    
+}
+
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.soon{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 2rem
+   ;
+}
+.icon{
+    width: 60%;
+    height: 8rem;
+}
+.icondiv{
+    width: 100%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 48rem){
+    .board{
+        padding-top: 2rem;
+    }
+}

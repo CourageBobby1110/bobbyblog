@@ -18,7 +18,7 @@ const Sidebar = () => {
      <div onClick={()=>setIsOpen((prev)=> !prev)}>
      <Image
         alt="hamburger"
-        src="hamburger.svg"
+        src="/hamburger.svg"
         height={70}
         width={70}
         className={styles.hamburger}
@@ -26,7 +26,7 @@ const Sidebar = () => {
       ></Image>
      </div>
       <div className={`${styles.sidenav } ${isOpen ? styles.puma : ""}`}>
-<div onClick={closeMenu}>        <Image alt="close" src='close.svg' height={40} width={40} className={styles.close} ></Image></div>
+<div onClick={closeMenu}>        <Image alt="close" src='/close.svg' height={40} width={40} className={styles.close} ></Image></div>
         <div className={styles.links} >
           {Nav.map((item, index) => (
             <div
