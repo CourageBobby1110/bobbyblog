@@ -2,7 +2,11 @@ import React from 'react'
 import Image from 'next/image';
 import styles from '../posts.module.css'
 import { moment } from '../format';
+import cards from '../cards'
 import Link from 'next/link';
+import { FacebookShareButton, InstapaperShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
+import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import Cards from '../cards';
 
 interface PageProps{
     params : {
@@ -12,7 +16,7 @@ interface PageProps{
 
   const getPostById = async (id: string) =>{
     try {
-        const res = await fetch(`http://localhost:3000/api/posts/${id}`, 
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${id}`, 
           {
             cache: 'no-store'
           }
@@ -56,10 +60,9 @@ const page = async ({params: {id}}:PageProps) => {
        <div className={styles.sharepost}>
        <p> Share this post: </p>
        <div className={styles.social}>
-        <Link href={''}>X</Link>
-        <Link href={''}>Facebook</Link>
-        <Link href={''}>Instagram</Link>
-        <Link href={''}>Whatsapp</Link>
+        <Cards/>
+        
+       
        </div>
           
 

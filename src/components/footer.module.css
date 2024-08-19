@@ -120,6 +120,16 @@
        
     
     }
+
+    .link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        gap: 0.2rem;
+    }
+
+
 }
 @media  screen and (max-width: 48rem) {
     .footermain{
@@ -261,6 +271,13 @@
     .main{
         margin: auto;
     }
+    .link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        gap: 0.2rem;
+    }
     
     
 }
@@ -276,10 +293,6 @@
     .board{
         font-size: 12px;
     }
-    .link{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+   
     
 }

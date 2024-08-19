@@ -3,7 +3,7 @@ import styles from '../notification.module.css'
 
 const getUserById = async (id: string) =>{
     try {
-        const res = await fetch(`http://localhost:3000/api/user/${id}`, 
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/user/${id}`, 
           {
             cache: 'no-store'
           }

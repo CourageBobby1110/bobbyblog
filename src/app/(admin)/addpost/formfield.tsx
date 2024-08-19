@@ -41,7 +41,7 @@ const FormInput = ( ) => {
    
     try {
       
-      await fetch('http://localhost:3000/api/posts', {
+      await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

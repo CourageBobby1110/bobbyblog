@@ -85,6 +85,12 @@
     .body{
         width: 90%;
     }
+    .sharepost {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
 }
 
@@ -106,5 +112,10 @@
     }
     .sharepost p{
         font-size: 12px;
+    }
+    .sharepost {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -6,9 +6,12 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { addEmail } from '@/lib/footer';
 import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs';
 import { Triangle } from 'react-loader-spinner';
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {TwitterShareButton} from 'react-share'
+import { FacebookShareButton } from 'react-share';
+import { InstapaperShareButton } from 'react-share';
+import { LinkedinShareButton } from 'react-share';
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import Link from 'next/link';
@@ -115,13 +118,23 @@ const Footer = () => {
       <div className={styles.board}>
       <h2>Connect with me :</h2>
         <div className={styles.socialicons}>
-        <Link href={'/'}> <FaFacebook />Facebook</Link>
+      
+        <FacebookShareButton url='http://localhost:3000' title='Ravens Academy' className={styles.link}>
+          <FaFacebook /> Facebook
+        </FacebookShareButton>
         
         <TwitterShareButton url='http://localhost:3000' title='Ravens Academy' className={styles.link}>
           <FaXTwitter />
         </TwitterShareButton>
-        <Link href={'/'}   ><FaInstagramSquare />Instagram</Link>
-        <Link href={'/'}        > <FaLinkedin />               LinkedIn</Link>
+        <LinkedinShareButton url='http://localhost:3000' title='Ravens Academy' className={styles.link}>
+        <FaLinkedin />linkedIn
+        </LinkedinShareButton>
+        <InstapaperShareButton url='http://localhost:3000' title='Ravens Academy' className={styles.link}>
+        <FaInstagram />Instagram
+        </InstapaperShareButton>
+        
+        
+       
         </div>
 
         <div>

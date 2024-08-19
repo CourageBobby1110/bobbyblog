@@ -13,7 +13,7 @@ interface Users {
           
     
             // If user does not exist, proceed with the POST request
-            const response = await fetch('http://localhost:3000/api/user/', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/user/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
