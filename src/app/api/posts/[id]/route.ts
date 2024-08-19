@@ -1,13 +1,13 @@
 
 import {connectdb} from '@/database/db'
 import { NextRequest, NextResponse } from "next/server";
-import { NextApiRequest } from "next/types";
+
 import { posts } from "@/models/posts";
 
 
 // const data = connectdb()
 
-export async function GET(res:NextResponse, {params}: any, ){
+export async function GET( {params}: any, ){
   const data = connectdb()
      await data
    
