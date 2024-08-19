@@ -5,16 +5,16 @@ import Tutorcard from "./tutorcard";
 import styles from './tutoradmin.module.css';
 import { atlas } from '@/lib/getp';
 
-//  const getProducts = async () => {
-//   try {
-//     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getproduct/`, {
-//       cache: 'no-store',
-//     });
-//     return res.json();
-//   } catch (error) {
-//     console.error("Failed to fetch products:", error);
-//   }
-// };
+ const getProducts = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getproduct/`, {
+      cache: 'no-store',
+    });
+    return res.json();
+  } catch (error) {
+    console.error("Failed to fetch products:", error);
+  }
+};
 
 const TutorAdmin = async ({ searchParams }: { searchParams?: { query?: string; page?: any; } }) => {
   console.log(searchParams?.page);
