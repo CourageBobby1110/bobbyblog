@@ -5,7 +5,7 @@ import Tutorcard from "./tutorcard";
 import styles from './tutoradmin.module.css';
 import { atlas } from '@/lib/getp';
 
-export const getProducts = async () => {
+ const getProducts = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getproduct/`, {
       cache: 'no-store',
