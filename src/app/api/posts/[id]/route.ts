@@ -7,15 +7,17 @@ import { posts } from "@/models/posts";
 
 // const data = connectdb()
 
-export async function GET( request: NextRequest, {params}: any ){
+export async function GET( r:  NextRequest, {params}: any ){
   const data = connectdb()
      await data
+    
    
-
+      
     try {
         const {id} = params
      
         const product = await posts.findById(id );
+        
       
             
         
