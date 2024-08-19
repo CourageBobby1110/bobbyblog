@@ -38,8 +38,9 @@ export async function POST (req: NextRequest) {
 
 
 export const GET = async (
-  res: NextResponse,
-  req: NextRequest,
+  request: NextRequest,
+  response: NextResponse,
+ 
   page: number
 ) => {
   const data = connectdb()
