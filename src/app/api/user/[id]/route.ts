@@ -42,7 +42,7 @@ export async function GET(request:NextRequest, {params}: any, ){
   const data = connectdb()
      await data
    
-
+ 
     try {
         const {id} = params
      
