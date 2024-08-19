@@ -38,7 +38,7 @@ export async function POST (req: NextRequest) {
 
 
 export const GET = async (
-  request: NextRequest,
+  req: NextRequest,
   response: NextResponse,
  
   page: number

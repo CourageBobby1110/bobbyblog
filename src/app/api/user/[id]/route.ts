@@ -38,7 +38,7 @@ export async function PUT(request: NextRequest, { params }: any) {
 }
 
 
-export async function GET(res:NextResponse, {params}: any, ){
+export async function GET(request:NextRequest, {params}: any, ){
   const data = connectdb()
      await data
    
