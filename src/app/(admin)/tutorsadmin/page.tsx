@@ -8,7 +8,7 @@ import { atlas } from '@/lib/getp';
  const getProducts = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getproduct/`, {
-      cache: 'no-store',
+      
     });
     return res.json();
   } catch (error) {
