@@ -16,10 +16,7 @@ interface PageProps{
 
   const getPostById = async (id: string) =>{
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${id}`, 
-          {
-            cache: 'no-store'
-          }
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts/${id}`
         )
         return res.json()
         
