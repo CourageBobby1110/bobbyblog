@@ -11,7 +11,7 @@ const Cards = () => {
 
 
 <FacebookShareButton url={`${process.env.NEXT_PUBLIC_BASE_URL}`} title='Ravens Academy' className={styles.link}>
-          <FaFacebook /> Facebook
+          <div className={styles.social}><FaFacebook /> Facebook</div>
         </FacebookShareButton>
         
         <TwitterShareButton url={`${process.env.NEXT_PUBLIC_BASE_URL}`} title='Ravens Academy' className={styles.link}>
