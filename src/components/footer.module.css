@@ -110,6 +110,12 @@
         align-items: center;
         gap: 0.2rem;
     }
+    .socialicons div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
     
     .board{
         display: flex;
@@ -127,6 +133,7 @@
         align-items: center;
         border: 1px solid black;
         gap: 0.2rem;
+      
     }
 
 
@@ -293,8 +300,12 @@
     .board{
         font-size: 12px;
     }
-    .link{
+    .socialicons div{
         font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
    
     
