@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import styles from "./uploadcard.module.css";
+import styles from './upload.module.css'
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { IoIosCloseCircle } from "react-icons/io";
 
