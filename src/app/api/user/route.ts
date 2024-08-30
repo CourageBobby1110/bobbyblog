@@ -37,19 +37,4 @@ export async function POST (req: NextRequest) {
 };
 
 
-export const GET = async (
-  req: NextRequest,
-  response: NextResponse,
- 
-  page: number
-) => {
-  const data = connectdb()
-  await data;
-  try {
-    const user = await User.find({});
 
-    return NextResponse.json(user);
-  } catch (err) {
-    return NextResponse.json({ "product not found": err });
-  }
-};
