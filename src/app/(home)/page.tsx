@@ -65,7 +65,7 @@ await addUser({ firstName: ctx?.given_name, lastName: ctx?.family_name, email: c
 
       
          <Trending posts={trendingdata}/>
-         <DailyNews posts={data} />
+         <DailyNews posts={recentdata} />
          <Toparticles posts={topData}/>
         
       
