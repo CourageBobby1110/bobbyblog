@@ -110,7 +110,7 @@ const FormInput = ( ) => {
         <textarea
           {...register("body", { required: 'Body is Required' })}
           placeholder="Body"
-          maxLength={1000} />
+           />
         {errors.body && <p>{errors.body.message}</p>}
       </div>
       <div>
@@ -151,10 +151,11 @@ const FormInput = ( ) => {
           className="custom-class"
           endpoint="imageUploader"
           appearance={{
-            button: "ut-ready:bg-slate-500 ut-uploading:cursor-not-allowed ut-uploading: border-none rounded-r-none bg-brown-500 bg-none after:bg-orange-600 after:outline-none",
+            button: "ut-ready:primarybtn ut-uploading:cursor-not-allowed ut-uploading: border-none rounded-r-none primarybtn bg-none after:primarybtn after:outline-none",
             label: {
               color: 'black'
             }
+
           }}
           onClientUploadComplete={async (res) => {
             // Do something with the response
