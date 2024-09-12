@@ -30,6 +30,8 @@ export default async function  Home () {
     return f.categories == 'Trending'
   } )
 
+  const topData = data.filter(v => v.categories == 'Top')
+
   const trendingdata = data.filter(t => {
     return t
   })
@@ -64,7 +66,7 @@ await addUser({ firstName: ctx?.given_name, lastName: ctx?.family_name, email: c
       
          <Trending posts={trendingdata}/>
          <DailyNews posts={data} />
-         <Toparticles posts={recentdata}/>
+         <Toparticles posts={topData}/>
         
       
      
