@@ -59,13 +59,13 @@ const Navbar = () => {
       </div>
 
       <div className={styles.top} onClick={OpenMenu}>
-        <Image
-          src="/hamburger.svg"
+        <img
+          src="/hamburger2.svg"
           alt="menuicon"
-          width={70}
-          height={70}
+          width={50}
+          height={50}
           className={styles.hamburger}
-        ></Image>
+        />
       </div>
       <ul className={`${styles.ul}  ${isActive ? styles.Puma : ""}`}>
         <div

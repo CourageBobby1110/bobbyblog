@@ -1,0 +1,127 @@
+.container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #ff7b54;
+    margin-bottom: 10px;
+    animation: fadeInDown 0.8s ease;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .courseCard {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* To hide overflow in case of effects */
+  }
+  
+  .courseCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .courseImage {
+    width: 100%;
+    height: 150px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 15px 15px 0 0; /* Rounded corners on the top */
+  }
+  
+  .courseTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .category {
+    font-size: 1.2rem;
+    color: #ff7b54;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .buyButton {
+    background-color: #ff7b54;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buyButton:hover {
+    background-color: #ff5722;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .courseCard {
+      max-width: 100%;
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .courseImage {
+      height: 120px; /* Adjust height for smaller screens */
+    }
+  }
+  

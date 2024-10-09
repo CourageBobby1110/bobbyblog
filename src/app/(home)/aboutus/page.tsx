@@ -3,23 +3,19 @@ import styles from './aboutus.module.css'
 
 const AboutUs = () => {
   return (
-    <div className={styles.about}>
-        <div className={styles.main}>
-            <h1>About Us</h1>
-            <h2>Ravens Academy: Your Path to Academic Excellence</h2>
-            <p className={styles.para}>
-
-            Ravens Academy is a dedicated platform designed to empower university students to achieve their full potential. By providing meticulously crafted course outlines, Ravens Academy offers students a clear roadmap to academic success.
-
-With a focus on delivering exceptional study materials, Ravens Academy helps students develop a strong foundation in their chosen field, enabling them to excel in their coursework and beyond.
-
-
-
-
-
-</p>
-        </div>
-
+    <div className={styles.container}>
+      <div className={styles.main}>
+        <h1 className={styles.title}>About Us</h1>
+        <h2 className={styles.subtitle}>Ravens Academy: Empowering Lifelong Learning</h2>
+        <p className={styles.para}>
+          Ravens Academy is an innovative platform that offers education across all walks of life. Whether you are delving into the complexities of business, exploring the realms of science, or sharpening your financial skills, 
+          Ravens Academy is here to provide you with the knowledge and tools to thrive.
+        </p>
+        <p className={styles.para}>
+          Our mission is to teach, inspire, and guide individuals through every stage of their learning journey. We cover a wide range of topics to ensure that everyone, regardless of their field, has access to high-quality, 
+          comprehensive learning resources. From professional development to personal growth, Ravens Academy is dedicated to helping you succeed.
+        </p>
+      </div>
     </div>
   )
 }
